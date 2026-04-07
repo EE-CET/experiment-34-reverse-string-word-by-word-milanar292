@@ -1,8 +1,16 @@
+import java.util.*;
+
 public class ReverseWords {
-    
-        // TODO: Read the sentence line
-        // TODO: Split the sentence into words (using split method)
-        // TODO: Iterate backwards through the array of words
-        // TODO: Build and print the reversed sentence
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String str = sc.nextLine().trim();
+        
+        String[] words = str.split("\\s+"); // handles multiple spaces
+        
+        for (int i = words.length - 1; i >= 0; i--) {
+            System.out.print(words[i]);
+            if (i != 0) System.out.print(" ");
+        }
+    }
 }
